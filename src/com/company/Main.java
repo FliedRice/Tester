@@ -18,20 +18,7 @@ public class Main{
     Random randomGenerator = new Random();
     int number;
     int z;
-
-    void start(){
-        number = sc.nextInt();
-        if(number == 1){
-            test1();
-        }
-    }
-
-    public void test1(){
-        nodes = sc.nextInt();
-        taxi = sc.nextInt();
-        capacity = sc.nextInt();
-
-    }
+    int[] checker;
 
     public void info(){
         System.out.println("Type in parameter, waitingtime, taxi, capacity, nodes, training, calllist");
@@ -74,11 +61,11 @@ public class Main{
 
     public void graph() {
 
-        for(int i=0 ;i < nodes;i++) {//eerste node
+        for (int i = 0; i < nodes; i++) {//eerste node
             int n = amount[i];
             number = randomGenerator.nextInt(10);
-            while(n <= 10) {
-                if(amount[i] == 0) {
+            while (n <= 10) {
+                if (amount[i] == 0) {
                     while (amount[i] == 0) {
                         number = randomGenerator.nextInt(nodes);
                         while (i == number) {
@@ -94,10 +81,9 @@ public class Main{
                             array[number][z] = i;
                             amount[number] = z + 1;
                             usefull[number] = 1;
-                         //   amount[i]= amount[i]+1;
+                            //   amount[i]= amount[i]+1;
 
-                        }
-                        else if (usefull[number] == 1) {
+                        } else if (usefull[number] == 1) {
                             array[i][n] = number;
                             usefull[i] = 1;
                             amount[i] = 1;
@@ -106,14 +92,14 @@ public class Main{
                             array[number][z] = i;
                             amount[number] = z + 1;
                             usefull[number] = 1;
-                           //  amount[i]= amount[i]+1;
+                            //  amount[i]= amount[i]+1;
                         }
                     }
                     number = randomGenerator.nextInt(10);
                     n = n + 1;
                 }
 
-                while (number < 5) { //fix dat connecties ook terug geleiden fix connectie niet terug naar zelfde node
+                while (number < 5) {
                     number = randomGenerator.nextInt(nodes);
                     while (i == number) {
                         number = randomGenerator.nextInt(nodes);
@@ -124,10 +110,73 @@ public class Main{
                     array[number][z] = i;
                     amount[number] = z + 1;
                     usefull[number] = 1;
-                    amount[i]= amount[i]+1;
+                    amount[i] = amount[i] + 1;
                     number = randomGenerator.nextInt(10);
                     if (n == 10) {
-                        number=9;
+                        number = 9;
+                    }
+                }
+
+                n = 11;
+
+            }
+        }
+    }
+
+    public void check(){
+        for (int i = 0; i < nodes; i++) {//eerste node
+            int n = amount[i];
+            number = randomGenerator.nextInt(10);
+            while (n <= 10) {
+                if (amount[i] == 0) {
+                    while (amount[i] == 0) {
+                        number = randomGenerator.nextInt(nodes);
+                        while (i == number) {
+                            number = randomGenerator.nextInt(nodes);
+                        }
+
+                        if (i == 0) {
+                            array[i][n] = number;
+                            usefull[i] = 1;
+                            amount[i] = 1;
+
+                            z = amount[number];
+                            array[number][z] = i;
+                            amount[number] = z + 1;
+                            usefull[number] = 1;
+                            //   amount[i]= amount[i]+1;
+
+                        } else if (usefull[number] == 1) {
+                            array[i][n] = number;
+                            usefull[i] = 1;
+                            amount[i] = 1;
+
+                            z = amount[number];
+                            array[number][z] = i;
+                            amount[number] = z + 1;
+                            usefull[number] = 1;
+                            //  amount[i]= amount[i]+1;
+                        }
+                    }
+                    number = randomGenerator.nextInt(10);
+                    n = n + 1;
+                }
+
+                while (number < 5) {
+                    number = randomGenerator.nextInt(nodes);
+                    while (i == number) {
+                        number = randomGenerator.nextInt(nodes);
+                    }
+                    array[i][n] = number;
+                    n++;
+                    z = amount[number];
+                    array[number][z] = i;
+                    amount[number] = z + 1;
+                    usefull[number] = 1;
+                    amount[i] = amount[i] + 1;
+                    number = randomGenerator.nextInt(10);
+                    if (n == 10) {
+                        number = 9;
                     }
                 }
 
