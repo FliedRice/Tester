@@ -164,7 +164,6 @@ public class Main {
 		usefull = new int[nodes];
 		fill();
 		graph();
-		removeDup();
 		result();
 	}
 
