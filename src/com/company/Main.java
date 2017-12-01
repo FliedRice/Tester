@@ -119,8 +119,19 @@ public class Main {
 				while (number < 5) { // fix dat connecties ook terug geleiden fix connectie niet terug naar zelfde
 										// node
 					number = randomGenerator.nextInt(nodes);
+                    for(int p = 0; p <= amount[p]; p++){
+                        if(array[i][p] == number) {
+                            number = i;
+                        }
+                    }
 					while (i == number) {
 						number = randomGenerator.nextInt(nodes);
+						for(int p = 0; p <= amount[p]; p++){
+                            if(array[i][p] == number) {
+                                number = i;
+                            }
+                        }
+
 					}
 					if (amount[number] < 10) {
 						array[i][n] = number;
