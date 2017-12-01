@@ -18,6 +18,8 @@ public class Main {
 	Random randomGenerator = new Random();
 	int number;
 	int z;
+	int[] display;
+	
 
 	void start() {
 		number = sc.nextInt();
@@ -54,14 +56,18 @@ public class Main {
 		System.out.println(nodes);
 		System.out.print(training + " ");
 		System.out.println(callList);
+		System.out.println(" ");
 		for (int i = 0; i < nodes; i++) {
-			System.out.print(amount[i] + " ");
+			System.out.print(display[i] + " ");
 			for (int n = 0; n < amount[i]; n++) {
-				System.out.print(array[i][n] + " ");
+				if (array[i][n] != -1) {
+					System.out.print(array[i][n] + " ");
+				}
 			}
-			System.out.println(" ");
+				System.out.println(" ");
+			}
 		}
-	}
+	
 
 	public void fill() {
 		for (int i = 0; i < nodes; i++) {
@@ -73,9 +79,11 @@ public class Main {
 
 	public void graph() {
 
-		for (int i = 0; i < nodes; i++) {// alle node
+		// Go through all nodes
+		for (int i = 0; i < nodes; i++) {
 			int n = amount[i];
 			number = randomGenerator.nextInt(10);
+
 			while (n <= 10) {
 				if (amount[i] == 0) {
 					while (amount[i] == 0) {
@@ -96,21 +104,6 @@ public class Main {
 							usefull[number] = 1;
 							// amount[i]= amount[i]+1;
 						}
-							
-						/*
-						  else if (usefull[number] == 1) {
-							if (amount[number] < 10) {
-								array[i][n] = number;
-								usefull[i] = 1;
-								amount[i] = 1;
-
-								z = amount[number];
-								array[number][z] = i;
-								amount[number] = z + 1;
-								usefull[number] = 1;
-								// amount[i]= amount[i]+1;
-							}
-						} */
 					}
 					number = randomGenerator.nextInt(10);
 					n = n + 1;
@@ -119,19 +112,8 @@ public class Main {
 				while (number < 5) { // fix dat connecties ook terug geleiden fix connectie niet terug naar zelfde
 										// node
 					number = randomGenerator.nextInt(nodes);
-                    for(int p = 0; p <= amount[p]; p++){
-                        if(array[i][p] == number) {
-                            number = i;
-                        }
-                    }
 					while (i == number) {
 						number = randomGenerator.nextInt(nodes);
-						for(int p = 0; p <= amount[p]; p++){
-                            if(array[i][p] == number) {
-                                number = i;
-                            }
-                        }
-
 					}
 					if (amount[number] < 10) {
 						array[i][n] = number;
@@ -147,9 +129,24 @@ public class Main {
 						}
 					}
 				}
-
 				n = 11;
+			}
 
+		}
+
+	}
+
+	public void removeDup() {
+		for (int i = 0; i < nodes; i++) {
+			display[i] = amount[i];
+			for (int n = 0; n < amount[i]; n++) {
+				for (int x = 0; x < amount[i]; x++) {
+					if (array[i][n] == array[i][x] && x != n) {
+						array[i][n] = -1;
+						display[i]= display[i] -1;
+
+					}
+				}
 			}
 		}
 	}
@@ -158,9 +155,11 @@ public class Main {
 		info();
 		array = new int[nodes][10];
 		amount = new int[nodes];
+		display = new int[nodes];
 		usefull = new int[nodes];
 		fill();
 		graph();
+		removeDup();
 		result();
 	}
 
