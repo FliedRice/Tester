@@ -57,14 +57,11 @@ public class Main {
 		for (int i = 0; i < nodes; i++) {
 			System.out.print(amount[i] + " ");
 			for (int n = 0; n < amount[i]; n++) {
-				if (array[i][n] != -1) {
-					System.out.print(array[i][n] + " ");
-				}
+				System.out.print(array[i][n] + " ");
 			}
-				System.out.println(" ");
-			}
+			System.out.println(" ");
 		}
-	
+	}
 
 	public void fill() {
 		for (int i = 0; i < nodes; i++) {
@@ -76,11 +73,9 @@ public class Main {
 
 	public void graph() {
 
-		// Go through all nodes
-		for (int i = 0; i < nodes; i++) {
+		for (int i = 0; i < nodes; i++) {// alle node
 			int n = amount[i];
 			number = randomGenerator.nextInt(10);
-
 			while (n <= 10) {
 				if (amount[i] == 0) {
 					while (amount[i] == 0) {
@@ -101,6 +96,21 @@ public class Main {
 							usefull[number] = 1;
 							// amount[i]= amount[i]+1;
 						}
+							
+						/*
+						  else if (usefull[number] == 1) {
+							if (amount[number] < 10) {
+								array[i][n] = number;
+								usefull[i] = 1;
+								amount[i] = 1;
+
+								z = amount[number];
+								array[number][z] = i;
+								amount[number] = z + 1;
+								usefull[number] = 1;
+								// amount[i]= amount[i]+1;
+							}
+						} */
 					}
 					number = randomGenerator.nextInt(10);
 					n = n + 1;
@@ -137,22 +147,9 @@ public class Main {
 						}
 					}
 				}
+
 				n = 11;
-			}
 
-		}
-
-	}
-
-	public void removeDup() {
-		for (int i = 0; i < nodes; i++) {
-			for (int n = 0; n < amount[i]; n++) {
-				for (int x = 0; x < amount[i]; x++) {
-					if (array[i][n] == array[i][x] && x != n) {
-						array[i][n] = -1;
-
-					}
-				}
 			}
 		}
 	}
