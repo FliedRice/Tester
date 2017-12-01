@@ -63,8 +63,9 @@ public class Main {
 					System.out.print(conNodes[i][n] + " ");
 				}
 			}
+			System.out.println();
 		}
-		System.out.println(callList + " " + waitingtime);
+		//System.out.println(callList + " " + waitingtime);
 		}
 	
 
