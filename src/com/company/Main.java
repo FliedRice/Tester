@@ -12,9 +12,9 @@ public class Main {
 	int training;
 	int waitingtime;
 	int lines;
-	int[][] array;
-	int[] amount;
-	int[] usefull;
+	int[][] conNodes;
+	int[] conAmount;
+	boolean[] isConnected;
 	Random randomGenerator = new Random();
 	int number;
 	int z;
@@ -56,12 +56,11 @@ public class Main {
 		System.out.println(nodes);
 		System.out.print(training + " ");
 		System.out.println(callList);
-		System.out.println(" ");
 		for (int i = 0; i < nodes; i++) {
 			System.out.print(display[i] + " ");
-			for (int n = 0; n < amount[i]; n++) {
-				if (array[i][n] != -1) {
-					System.out.print(array[i][n] + " ");
+			for (int n = 0; n < conAmount[i]; n++) {
+				if (conNodes[i][n] != -1) {
+					System.out.print(conNodes[i][n] + " ");
 				}
 			}
 				System.out.println(" ");
@@ -71,8 +70,8 @@ public class Main {
 
 	public void fill() {
 		for (int i = 0; i < nodes; i++) {
-			amount[i] = 0;
-			usefull[i] = 0;
+			conAmount[i] = 0;
+			isConnected[i] = false;
 
 		}
 	}
@@ -81,48 +80,46 @@ public class Main {
 
 		// Go through all nodes
 		for (int i = 0; i < nodes; i++) {
-			int n = amount[i];
+			int n = conAmount[i];
 			number = randomGenerator.nextInt(10);
 
 			while (n <= 10) {
-				if (amount[i] == 0) {
-					while (amount[i] == 0) {
+				if (conAmount[i] == 0) {
+					while (conAmount[i] == 0) {
 						number = randomGenerator.nextInt(nodes);
 						while (i == number) {
 							number = randomGenerator.nextInt(nodes);
 						}
 
-						if (i == 0 || (usefull[number] == 1 && amount[number] < 10)) {
+						if (i == 0 || (isConnected[number] == true && conAmount[number] < 10)) {
 
-							array[i][n] = number;
-							usefull[i] = 1;
-							amount[i] = 1;
+							conNodes[i][n] = number;
+							isConnected[i] = true;
+							conAmount[i] = 1;
 
-							z = amount[number];
-							array[number][z] = i;
-							amount[number] = z + 1;
-							usefull[number] = 1;
-							// amount[i]= amount[i]+1;
+							z = conAmount[number];
+							conNodes[number][z] = i;
+							conAmount[number] = z + 1;
+							isConnected[number] = true;
 						}
 					}
 					number = randomGenerator.nextInt(10);
 					n = n + 1;
 				}
 
-				while (number < 5) { // fix dat connecties ook terug geleiden fix connectie niet terug naar zelfde
-										// node
+				while (number < 5) { 
 					number = randomGenerator.nextInt(nodes);
 					while (i == number) {
 						number = randomGenerator.nextInt(nodes);
 					}
-					if (amount[number] < 10) {
-						array[i][n] = number;
+					if (conAmount[number] < 10) {
+						conNodes[i][n] = number;
 						n++;
-						z = amount[number];
-						array[number][z] = i;
-						amount[number] = z + 1;
-						usefull[number] = 1;
-						amount[i] = amount[i] + 1;
+						z = conAmount[number];
+						conNodes[number][z] = i;
+						conAmount[number] = z + 1;
+						isConnected[number] = true;
+						conAmount[i] = conAmount[i] + 1;
 						number = randomGenerator.nextInt(10);
 						if (n == 10) {
 							number = 9;
@@ -138,13 +135,12 @@ public class Main {
 
 	public void removeDup() {
 		for (int i = 0; i < nodes; i++) {
-			display[i] = amount[i];
-			for (int n = 0; n < amount[i]; n++) {
-				for (int x = 0; x < amount[i]; x++) {
-					if (array[i][n] == array[i][x] && x != n) {
-						array[i][n] = -1;
-						display[i]= display[i] -1;
-
+			display[i] = conAmount[i];
+			for (int n = 0; n < conAmount[i]; n++) {
+				for (int x = 0; x < conAmount[i]; x++) {
+					if (conNodes[i][n] == conNodes[i][x] && x != n) {
+						conNodes[i][n] = -1;
+						display[i]--;
 					}
 				}
 			}
@@ -153,10 +149,10 @@ public class Main {
 
 	public void run() {
 		info();
-		array = new int[nodes][10];
-		amount = new int[nodes];
+		conNodes = new int[nodes][10];
+		conAmount = new int[nodes];
 		display = new int[nodes];
-		usefull = new int[nodes];
+		isConnected = new boolean[nodes];
 		fill();
 		graph();
 		removeDup();
