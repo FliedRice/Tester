@@ -63,8 +63,8 @@ public class Main {
 					System.out.print(conNodes[i][n] + " ");
 				}
 			}
-				System.out.println(" ");
-			}
+		}
+		System.out.println(callList + " " + waitingtime);
 		}
 	
 
@@ -139,13 +139,28 @@ public class Main {
 			for (int n = 0; n < conAmount[i]; n++) {
 				for (int x = 0; x < conAmount[i]; x++) {
 					if (conNodes[i][n] == conNodes[i][x] && x != n) {
-						conNodes[i][n] = -1;
+						conNodes[i][n]= -1;
 						display[i]--;
 					}
 				}
 			}
 		}
 	}
+	
+	public void customerSpawn() {
+		number = randomGenerator.nextInt(20);
+		System.out.print(number + " ");
+		for (int i = 0; i < number; i++) {
+			int p = randomGenerator.nextInt(nodes);
+			int x = randomGenerator.nextInt(nodes);
+			while (p == x) {
+				p = randomGenerator.nextInt(nodes);
+			}
+			System.out.print(p + " " + x + " ");
+		}
+		System.out.println();
+	}
+
 
 	public void run() {
 		info();
@@ -157,6 +172,7 @@ public class Main {
 		graph();
 		removeDup();
 		result();
+		customerSpawn();
 	}
 
 	public static void main(String[] args) {
