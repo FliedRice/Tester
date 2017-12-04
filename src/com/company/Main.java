@@ -10,7 +10,7 @@ public class Main {
 	int nodes;
 	int taxi;
 	int training;
-	int waitingtime;
+	int maxTime;
 	int lines;
 	int[][] conNodes;
 	int[] conAmount;
@@ -38,7 +38,7 @@ public class Main {
 	public void info() {
 		System.out.println("Type in parameter, waitingtime, taxi, capacity, nodes, training, calllist");
 		parameter = sc.nextDouble();
-		waitingtime = sc.nextInt();
+		maxTime = sc.nextInt();
 		taxi = sc.nextInt();
 		capacity = sc.nextInt();
 		nodes = sc.nextInt();
@@ -51,11 +51,9 @@ public class Main {
 	public void result() {
 		System.out.println(lines);
 		System.out.println(parameter);
-		System.out.println(taxi);
-		System.out.println(capacity);
+		System.out.println(maxTime);
+		System.out.println(taxi + " " + capacity);
 		System.out.println(nodes);
-		System.out.print(training + " ");
-		System.out.println(callList);
 		for (int i = 0; i < nodes; i++) {
 			System.out.print(display[i] + " ");
 			for (int n = 0; n < conAmount[i]; n++) {
@@ -65,8 +63,7 @@ public class Main {
 			}
 			System.out.println();
 		}
-		// System.out.println(callList + " " + waitingtime);
-		System.out.println();
+		System.out.println(training + " " + callList);
 	}
 
 	public void fill() {
@@ -91,7 +88,6 @@ public class Main {
 						while (i == number) {
 							number = randomGenerator.nextInt(nodes);
 						}
-
 						if (i == 0 || (isConnected[number] == true && conAmount[number] < 10)) {
 
 							conNodes[i][n] = number;
@@ -134,6 +130,60 @@ public class Main {
 
 	}
 
+	public void asickGraph() {
+		for (int i = 0; i < nodes; i++) {
+			int n = conAmount[i];
+			number = randomGenerator.nextInt(10);
+
+			while (n < 10) {
+				if (conAmount[i] == 0) {
+					while (conAmount[i] == 0) {
+						number = randomGenerator.nextInt(nodes);
+						while (i == number) {
+							number = randomGenerator.nextInt(nodes);
+						}
+						if (i == 0 || (isConnected[number] == true && conAmount[number] < 10)) {
+
+							conNodes[i][n] = number;
+							isConnected[i] = true;
+							conAmount[i] = 1;
+
+							z = conAmount[number];
+							conNodes[number][z] = i;
+							conAmount[number] = z + 1;
+							isConnected[number] = true;
+						}
+					}
+					number = randomGenerator.nextInt(10);
+					n = n + 1;
+				}
+
+				while (number < 5) {
+					number = randomGenerator.nextInt(nodes);
+					while (i == number) {
+						number = randomGenerator.nextInt(nodes);
+					}
+					if (conAmount[number] < 10 && isConnected[number] == false) {
+						conNodes[i][n] = number;
+						n++;
+						z = conAmount[number];
+						conNodes[number][z] = i;
+						conAmount[number] = z + 1;
+						isConnected[number] = true;
+						conAmount[i] = conAmount[i] + 1;
+						number = randomGenerator.nextInt(10);
+						if (n == 10) {
+							number = 9;
+						}
+					}
+				}
+				n = 11;
+			}
+
+		}
+
+	}
+
 	public void removeDup() {
 		for (int i = 0; i < nodes; i++) {
 			display[i] = conAmount[i];
@@ -149,7 +199,7 @@ public class Main {
 	}
 
 	public void customerSpawn() {
-		number = randomGenerator.nextInt(20);
+		number = randomGenerator.nextInt(5);
 		System.out.print(number + " ");
 		for (int i = 0; i < number; i++) {
 			x = randomGenerator.nextInt(nodes);
@@ -198,15 +248,13 @@ public class Main {
 		display = new int[nodes];
 		isConnected = new boolean[nodes];
 		fill();
-		graph();
+		asickGraph();
+		// graph();
 		removeDup();
 		result();
-		minutes = randomGenerator.nextInt(10);
-		System.out.println("total amount of minutes is " + minutes);
-		for (int i = 0 ; i < minutes; i++) {
-		customerSpawn();
+		for (int i = 0; i < training + callList; i++) {
+			customerSpawn();
 		}
-		System.out.println("finshed");
 	}
 
 	public static void main(String[] args) {
