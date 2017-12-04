@@ -19,7 +19,7 @@ public class Main {
 	int number;
 	int z;
 	int[] display;
-	
+	int x,y;
 
 	void start() {
 		number = sc.nextInt();
@@ -65,9 +65,9 @@ public class Main {
 			}
 			System.out.println();
 		}
-		//System.out.println(callList + " " + waitingtime);
-		}
-	
+		// System.out.println(callList + " " + waitingtime);
+		System.out.println();
+	}
 
 	public void fill() {
 		for (int i = 0; i < nodes; i++) {
@@ -108,7 +108,7 @@ public class Main {
 					n = n + 1;
 				}
 
-				while (number < 5) { 
+				while (number < 5) {
 					number = randomGenerator.nextInt(nodes);
 					while (i == number) {
 						number = randomGenerator.nextInt(nodes);
@@ -140,28 +140,54 @@ public class Main {
 			for (int n = 0; n < conAmount[i]; n++) {
 				for (int x = 0; x < conAmount[i]; x++) {
 					if (conNodes[i][n] == conNodes[i][x] && x != n) {
-						conNodes[i][n]= -1;
+						conNodes[i][n] = -1;
 						display[i]--;
 					}
 				}
 			}
 		}
 	}
-	
+
 	public void customerSpawn() {
 		number = randomGenerator.nextInt(20);
 		System.out.print(number + " ");
 		for (int i = 0; i < number; i++) {
-			int p = randomGenerator.nextInt(nodes);
-			int x = randomGenerator.nextInt(nodes);
-			while (p == x) {
-				p = randomGenerator.nextInt(nodes);
-			}
-			System.out.print(p + " " + x + " ");
+			x = randomGenerator.nextInt(nodes);
+			y = randomGenerator.nextInt(nodes);
+			while (!edgeCheck() || x == y) {
+				y = randomGenerator.nextInt(nodes);
+			};
+			System.out.print(x + " " + y + " ");
 		}
 		System.out.println();
 	}
+	
+	public boolean edgeCheck() {
+		int p = 0, q = 0;
+		for (int k = 0; k < conAmount[x]; k++) {
+			if (conNodes[x][k] != -1) {
+			q = conNodes[x][k];
+			}
+			if (q == y ) {
+				return false;
+			}
 
+			for (int l = 0; l < conAmount[q]; l++) {
+				if(conNodes[q][l] != -1) {
+				p = conNodes[q][l];
+				}
+				if (p == y) {
+					return false;
+				}
+				for (int m = 0; m < conAmount[p]; m++) {
+					if (conNodes[p][m] == y) {
+						return false;
+					}
+				}
+			}
+		}
+		return true;
+	}
 
 	public void run() {
 		info();
