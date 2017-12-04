@@ -3,6 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="9003d557-1a57-4448-97ad-d1b80a263266" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/out/production/Tester/com/company/Main.class" afterPath="$PROJECT_DIR$/out/production/Tester/com/company/Main.class" />
+<<<<<<< HEAD
+=======
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+>>>>>>> parent of 49421fd... Taxilist Jing
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/company/Main.java" afterPath="$PROJECT_DIR$/src/com/company/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -18,6 +22,7 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
             <state relative-caret-position="-996">
               <caret line="180" column="63" lean-forward="false" selection-start-line="180" selection-start-column="63" selection-end-line="180" selection-end-column="63" />
               <folding>
@@ -26,6 +31,11 @@
                 <element signature="e#9527#9528#0" expanded="true" />
                 <element signature="e#9552#9553#0" expanded="true" />
               </folding>
+=======
+            <state relative-caret-position="21">
+              <caret line="111" column="56" lean-forward="false" selection-start-line="111" selection-start-column="56" selection-end-line="111" selection-end-column="56" />
+              <folding />
+>>>>>>> parent of 49421fd... Taxilist Jing
             </state>
           </provider>
         </entry>
@@ -79,11 +89,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="AndroidView" />
-      <pane id="ProjectPane" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -158,50 +168,34 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32460135" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13641246" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32460135" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+<<<<<<< HEAD
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32460135" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+=======
+>>>>>>> parent of 49421fd... Taxilist Jing
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13480128" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32915717" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -214,6 +208,7 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="1197">
           <caret line="57" column="32" lean-forward="false" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
           <folding>
@@ -263,6 +258,11 @@
             <element signature="e#9527#9528#0" expanded="true" />
             <element signature="e#9552#9553#0" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+>>>>>>> parent of 49421fd... Taxilist Jing
         </state>
       </provider>
     </entry>
@@ -293,12 +293,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="19" column="10" lean-forward="true" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+<<<<<<< HEAD
           <folding>
             <element signature="e#5791#5792#0" expanded="true" />
             <element signature="e#5825#5826#0" expanded="true" />
             <element signature="e#9527#9528#0" expanded="true" />
             <element signature="e#9552#9553#0" expanded="true" />
           </folding>
+=======
+          <folding />
+>>>>>>> parent of 49421fd... Taxilist Jing
         </state>
       </provider>
     </entry>
@@ -321,12 +325,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1197">
           <caret line="57" column="32" lean-forward="false" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
+<<<<<<< HEAD
           <folding>
             <element signature="e#5791#5792#0" expanded="true" />
             <element signature="e#5825#5826#0" expanded="true" />
             <element signature="e#9527#9528#0" expanded="true" />
             <element signature="e#9552#9553#0" expanded="true" />
           </folding>
+=======
+          <folding />
+>>>>>>> parent of 49421fd... Taxilist Jing
         </state>
       </provider>
     </entry>
@@ -349,12 +357,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
           <caret line="130" column="37" lean-forward="true" selection-start-line="130" selection-start-column="37" selection-end-line="130" selection-end-column="37" />
+<<<<<<< HEAD
           <folding>
             <element signature="e#5791#5792#0" expanded="true" />
             <element signature="e#5825#5826#0" expanded="true" />
             <element signature="e#9527#9528#0" expanded="true" />
             <element signature="e#9552#9553#0" expanded="true" />
           </folding>
+=======
+          <folding />
+>>>>>>> parent of 49421fd... Taxilist Jing
         </state>
       </provider>
     </entry>
@@ -377,12 +389,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="19" column="10" lean-forward="true" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+<<<<<<< HEAD
           <folding>
             <element signature="e#5791#5792#0" expanded="true" />
             <element signature="e#5825#5826#0" expanded="true" />
             <element signature="e#9527#9528#0" expanded="true" />
             <element signature="e#9552#9553#0" expanded="true" />
           </folding>
+=======
+          <folding />
+>>>>>>> parent of 49421fd... Taxilist Jing
         </state>
       </provider>
     </entry>
@@ -405,12 +421,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1197">
           <caret line="57" column="32" lean-forward="false" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
+<<<<<<< HEAD
           <folding>
             <element signature="e#5791#5792#0" expanded="true" />
             <element signature="e#5825#5826#0" expanded="true" />
             <element signature="e#9527#9528#0" expanded="true" />
             <element signature="e#9552#9553#0" expanded="true" />
           </folding>
+=======
+          <folding />
+>>>>>>> parent of 49421fd... Taxilist Jing
         </state>
       </provider>
     </entry>
@@ -433,12 +453,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="430">
           <caret line="141" column="16" lean-forward="false" selection-start-line="141" selection-start-column="16" selection-end-line="141" selection-end-column="16" />
+<<<<<<< HEAD
           <folding>
             <element signature="e#5791#5792#0" expanded="true" />
             <element signature="e#5825#5826#0" expanded="true" />
             <element signature="e#9527#9528#0" expanded="true" />
             <element signature="e#9552#9553#0" expanded="true" />
           </folding>
+=======
+          <folding />
+>>>>>>> parent of 49421fd... Taxilist Jing
         </state>
       </provider>
     </entry>
@@ -461,12 +485,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="19" column="10" lean-forward="true" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+<<<<<<< HEAD
           <folding>
             <element signature="e#5791#5792#0" expanded="true" />
             <element signature="e#5825#5826#0" expanded="true" />
             <element signature="e#9527#9528#0" expanded="true" />
             <element signature="e#9552#9553#0" expanded="true" />
           </folding>
+=======
+          <folding />
+>>>>>>> parent of 49421fd... Taxilist Jing
         </state>
       </provider>
     </entry>
@@ -489,12 +517,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1197">
           <caret line="57" column="32" lean-forward="false" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
+<<<<<<< HEAD
           <folding>
             <element signature="e#5791#5792#0" expanded="true" />
             <element signature="e#5825#5826#0" expanded="true" />
             <element signature="e#9527#9528#0" expanded="true" />
             <element signature="e#9552#9553#0" expanded="true" />
           </folding>
+=======
+          <folding />
+>>>>>>> parent of 49421fd... Taxilist Jing
         </state>
       </provider>
     </entry>
@@ -517,12 +549,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="171" column="16" lean-forward="false" selection-start-line="171" selection-start-column="16" selection-end-line="171" selection-end-column="16" />
+<<<<<<< HEAD
           <folding>
             <element signature="e#5791#5792#0" expanded="true" />
             <element signature="e#5825#5826#0" expanded="true" />
             <element signature="e#9527#9528#0" expanded="true" />
             <element signature="e#9552#9553#0" expanded="true" />
           </folding>
+=======
+          <folding />
+>>>>>>> parent of 49421fd... Taxilist Jing
         </state>
       </provider>
     </entry>
@@ -545,12 +581,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="19" column="10" lean-forward="true" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+<<<<<<< HEAD
           <folding>
             <element signature="e#5791#5792#0" expanded="true" />
             <element signature="e#5825#5826#0" expanded="true" />
             <element signature="e#9527#9528#0" expanded="true" />
             <element signature="e#9552#9553#0" expanded="true" />
           </folding>
+=======
+          <folding />
+>>>>>>> parent of 49421fd... Taxilist Jing
         </state>
       </provider>
     </entry>
@@ -573,12 +613,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1197">
           <caret line="57" column="32" lean-forward="false" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
+<<<<<<< HEAD
           <folding>
             <element signature="e#5791#5792#0" expanded="true" />
             <element signature="e#5825#5826#0" expanded="true" />
             <element signature="e#9527#9528#0" expanded="true" />
             <element signature="e#9552#9553#0" expanded="true" />
           </folding>
+=======
+          <folding />
+>>>>>>> parent of 49421fd... Taxilist Jing
         </state>
       </provider>
     </entry>
@@ -601,12 +645,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="157">
           <caret line="130" column="37" lean-forward="true" selection-start-line="130" selection-start-column="37" selection-end-line="130" selection-end-column="37" />
+<<<<<<< HEAD
           <folding>
             <element signature="e#5791#5792#0" expanded="true" />
             <element signature="e#5825#5826#0" expanded="true" />
             <element signature="e#9527#9528#0" expanded="true" />
             <element signature="e#9552#9553#0" expanded="true" />
           </folding>
+=======
+          <folding />
+>>>>>>> parent of 49421fd... Taxilist Jing
         </state>
       </provider>
     </entry>
@@ -629,12 +677,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="399">
           <caret line="19" column="10" lean-forward="true" selection-start-line="19" selection-start-column="10" selection-end-line="19" selection-end-column="10" />
+<<<<<<< HEAD
           <folding>
             <element signature="e#5791#5792#0" expanded="true" />
             <element signature="e#5825#5826#0" expanded="true" />
             <element signature="e#9527#9528#0" expanded="true" />
             <element signature="e#9552#9553#0" expanded="true" />
           </folding>
+=======
+          <folding />
+>>>>>>> parent of 49421fd... Taxilist Jing
         </state>
       </provider>
     </entry>
@@ -657,12 +709,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1197">
           <caret line="57" column="32" lean-forward="false" selection-start-line="57" selection-start-column="32" selection-end-line="57" selection-end-column="32" />
+<<<<<<< HEAD
           <folding>
             <element signature="e#5791#5792#0" expanded="true" />
             <element signature="e#5825#5826#0" expanded="true" />
             <element signature="e#9527#9528#0" expanded="true" />
             <element signature="e#9552#9553#0" expanded="true" />
           </folding>
+=======
+          <folding />
+>>>>>>> parent of 49421fd... Taxilist Jing
         </state>
       </provider>
     </entry>
@@ -683,6 +739,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/company/Main.java">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
         <state relative-caret-position="-996">
           <caret line="180" column="63" lean-forward="false" selection-start-line="180" selection-start-column="63" selection-end-line="180" selection-end-column="63" />
           <folding>
@@ -691,6 +748,11 @@
             <element signature="e#9527#9528#0" expanded="true" />
             <element signature="e#9552#9553#0" expanded="true" />
           </folding>
+=======
+        <state relative-caret-position="21">
+          <caret line="111" column="56" lean-forward="false" selection-start-line="111" selection-start-column="56" selection-end-line="111" selection-end-column="56" />
+          <folding />
+>>>>>>> parent of 49421fd... Taxilist Jing
         </state>
       </provider>
     </entry>

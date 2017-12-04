@@ -4,6 +4,7 @@ import java.util.*;
 
 public class Main {
 <<<<<<< HEAD
+<<<<<<< HEAD
     Scanner sc = new Scanner(System.in);
     double parameter;
     int capacity;
@@ -198,6 +199,8 @@ public class Main {
         (new Main()).run();
     }
 =======
+=======
+>>>>>>> parent of 49421fd... Taxilist Jing
 	Scanner sc = new Scanner(System.in);
 	double parameter;
 	int capacity;
@@ -258,9 +261,14 @@ public class Main {
 					System.out.print(conNodes[i][n] + " ");
 				}
 			}
+<<<<<<< HEAD
 			System.out.println();
 		}
 		//System.out.println(callList + " " + waitingtime);
+=======
+				System.out.println(" ");
+			}
+>>>>>>> parent of 49421fd... Taxilist Jing
 		}
 	
 
@@ -335,13 +343,18 @@ public class Main {
 			for (int n = 0; n < conAmount[i]; n++) {
 				for (int x = 0; x < conAmount[i]; x++) {
 					if (conNodes[i][n] == conNodes[i][x] && x != n) {
+<<<<<<< HEAD
 						conNodes[i][n]= -1;
+=======
+						conNodes[i][n] = -1;
+>>>>>>> parent of 49421fd... Taxilist Jing
 						display[i]--;
 					}
 				}
 			}
 		}
 	}
+<<<<<<< HEAD
 	
 	public void customerSpawn() {
 		number = randomGenerator.nextInt(20);
@@ -357,6 +370,8 @@ public class Main {
 		System.out.println();
 	}
 
+=======
+>>>>>>> parent of 49421fd... Taxilist Jing
 
 	public void run() {
 		info();
@@ -368,11 +383,17 @@ public class Main {
 		graph();
 		removeDup();
 		result();
+<<<<<<< HEAD
 		customerSpawn();
+=======
+>>>>>>> parent of 49421fd... Taxilist Jing
 	}
 
 	public static void main(String[] args) {
 		(new Main()).run();
 	}
+<<<<<<< HEAD
 >>>>>>> 6b9583eceec3481ba3600dc6a6b0a2338af344bd
+=======
+>>>>>>> parent of 49421fd... Taxilist Jing
 }
