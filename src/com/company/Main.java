@@ -20,6 +20,7 @@ public class Main {
 	int z;
 	int[] display;
 	int x, y;
+	int minutes;
 
 	void start() {
 		number = sc.nextInt();
@@ -83,7 +84,7 @@ public class Main {
 			int n = conAmount[i];
 			number = randomGenerator.nextInt(10);
 
-			while (n <= 10) {
+			while (n < 10) {
 				if (conAmount[i] == 0) {
 					while (conAmount[i] == 0) {
 						number = randomGenerator.nextInt(nodes);
@@ -154,6 +155,7 @@ public class Main {
 			x = randomGenerator.nextInt(nodes);
 			y = randomGenerator.nextInt(nodes);
 			while (!edgeCheck() || x == y) {
+				x = randomGenerator.nextInt(nodes);
 				y = randomGenerator.nextInt(nodes);
 			}
 			;
@@ -199,7 +201,12 @@ public class Main {
 		graph();
 		removeDup();
 		result();
+		minutes = randomGenerator.nextInt(10);
+		System.out.println("total amount of minutes is " + minutes);
+		for (int i = 0 ; i < minutes; i++) {
 		customerSpawn();
+		}
+		System.out.println("finshed");
 	}
 
 	public static void main(String[] args) {
