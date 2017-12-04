@@ -54,8 +54,6 @@ public class Main {
 		System.out.println(taxi);
 		System.out.println(capacity);
 		System.out.println(nodes);
-		System.out.print(training + " ");
-		System.out.println(callList);
 		for (int i = 0; i < nodes; i++) {
 			System.out.print(display[i] + " ");
 			for (int n = 0; n < conAmount[i]; n++) {
@@ -65,8 +63,9 @@ public class Main {
 			}
 			System.out.println();
 		}
+        System.out.print(training + " ");
+        System.out.println(callList);
 		// System.out.println(callList + " " + waitingtime);
-		System.out.println();
 	}
 
 	public void fill() {
@@ -149,7 +148,10 @@ public class Main {
 	}
 
 	public void customerSpawn() {
-		number = randomGenerator.nextInt(20);
+	    number = 0;
+                while(number == 0) {
+                    number = randomGenerator.nextInt(20);
+                }
 		System.out.print(number + " ");
 		for (int i = 0; i < number; i++) {
 			x = randomGenerator.nextInt(nodes);
@@ -192,22 +194,24 @@ public class Main {
 	}
 
 	public void run() {
-		info();
-		conNodes = new int[nodes][10];
-		conAmount = new int[nodes];
-		display = new int[nodes];
-		isConnected = new boolean[nodes];
-		fill();
-		graph();
-		removeDup();
-		result();
-		minutes = randomGenerator.nextInt(10);
-		System.out.println("total amount of minutes is " + minutes);
-		for (int i = 0 ; i < minutes; i++) {
-		customerSpawn();
-		}
-		System.out.println("finshed");
-	}
+        info();
+        conNodes = new int[nodes][10];
+        conAmount = new int[nodes];
+        display = new int[nodes];
+        isConnected = new boolean[nodes];
+        fill();
+        graph();
+        removeDup();
+        result();
+        for (int i = 0; i < callList; i++) {
+            number = randomGenerator.nextInt(100);
+            if (number > 93) {
+                customerSpawn();
+            } else {
+                System.out.println(0);
+            }
+        }
+    }
 
 	public static void main(String[] args) {
 		(new Main()).run();
