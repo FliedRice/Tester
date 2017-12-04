@@ -5,6 +5,9 @@ import java.util.*;
 public class Main {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> parent of 6c4c17d... Merge branch 'denis' of https://github.com/FliedRice/Tester into denis
     Scanner sc = new Scanner(System.in);
     double parameter;
     int capacity;
@@ -198,6 +201,7 @@ public class Main {
     public static void main(String[] args) {
         (new Main()).run();
     }
+<<<<<<< HEAD
 =======
 =======
 >>>>>>> parent of 49421fd... Taxilist Jing
@@ -396,4 +400,6 @@ public class Main {
 >>>>>>> 6b9583eceec3481ba3600dc6a6b0a2338af344bd
 =======
 >>>>>>> parent of 49421fd... Taxilist Jing
+=======
+>>>>>>> parent of 6c4c17d... Merge branch 'denis' of https://github.com/FliedRice/Tester into denis
 }
