@@ -179,6 +179,74 @@ public class Main {
 				}
 				n = 11;
 			}
+		}
+	}
+	
+	public void sickGraph() {
+		for (int i = 0; i < nodes; i++) {
+			int n = conAmount[i];
+			number = randomGenerator.nextInt(10);
+
+			while (n < 10) {
+				if (conAmount[i] == 0) {
+					while (conAmount[i] == 0) {
+						number = randomGenerator.nextInt(nodes);
+						while (i == number) {
+							number = randomGenerator.nextInt(nodes);
+						}
+						if (i == 0 || (isConnected[number] == true && conAmount[number] < 10)) {
+
+							conNodes[i][n] = number;
+							isConnected[i] = true;
+							conAmount[i] = 1;
+
+							z = conAmount[number];
+							conNodes[number][z] = i;
+							conAmount[number] = z + 1;
+							isConnected[number] = true;
+						}
+					}
+					number = randomGenerator.nextInt(10);
+					n = n + 1;
+				}
+				if (conAmount[i]== 1) {
+					while (conAmount[i] == 1) {
+						number = randomGenerator.nextInt(nodes);
+						while (i == number || number == conNodes[i][0]){
+							number = randomGenerator.nextInt(nodes);
+						}
+						if (conAmount[number] < 10) {
+						conNodes[i][n] = number;
+						conAmount[i] = 2;
+						z = conAmount[number];
+						conNodes[number][z] = i;
+						conAmount[number] = z + 1;
+						isConnected[number] = true;
+						}
+					}
+				}
+
+				while (number < 5) {
+					number = randomGenerator.nextInt(nodes);
+					while (i == number) {
+						number = randomGenerator.nextInt(nodes);
+					}
+					if (conAmount[number] < 10 && isConnected[number] == false) {
+						conNodes[i][n] = number;
+						n++;
+						z = conAmount[number];
+						conNodes[number][z] = i;
+						conAmount[number] = z + 1;
+						isConnected[number] = true;
+						conAmount[i] = conAmount[i] + 1;
+						number = randomGenerator.nextInt(10);
+						if (n == 10) {
+							number = 9;
+						}
+					}
+				}
+				n = 11;
+			}
 
 		}
 
@@ -248,11 +316,12 @@ public class Main {
 		display = new int[nodes];
 		isConnected = new boolean[nodes];
 		fill();
-		asickGraph();
+		sickGraph();
+		//asickGraph();
 		// graph();
 		removeDup();
 		result();
-		for (int i = 0; i < training + callList; i++) {
+		for (int i = 0; i < callList; i++) {
 			customerSpawn();
 		}
 	}
