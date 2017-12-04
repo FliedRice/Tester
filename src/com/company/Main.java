@@ -19,7 +19,7 @@ public class Main {
 	int number;
 	int z;
 	int[] display;
-	int x,y;
+	int x, y;
 
 	void start() {
 		number = sc.nextInt();
@@ -32,7 +32,6 @@ public class Main {
 		nodes = sc.nextInt();
 		taxi = sc.nextInt();
 		capacity = sc.nextInt();
-
 	}
 
 	public void info() {
@@ -156,25 +155,26 @@ public class Main {
 			y = randomGenerator.nextInt(nodes);
 			while (!edgeCheck() || x == y) {
 				y = randomGenerator.nextInt(nodes);
-			};
+			}
+			;
 			System.out.print(x + " " + y + " ");
 		}
 		System.out.println();
 	}
-	
+
 	public boolean edgeCheck() {
 		int p = 0, q = 0;
 		for (int k = 0; k < conAmount[x]; k++) {
 			if (conNodes[x][k] != -1) {
-			q = conNodes[x][k];
+				q = conNodes[x][k];
 			}
-			if (q == y ) {
+			if (q == y) {
 				return false;
 			}
 
 			for (int l = 0; l < conAmount[q]; l++) {
-				if(conNodes[q][l] != -1) {
-				p = conNodes[q][l];
+				if (conNodes[q][l] != -1) {
+					p = conNodes[q][l];
 				}
 				if (p == y) {
 					return false;
@@ -205,4 +205,5 @@ public class Main {
 	public static void main(String[] args) {
 		(new Main()).run();
 	}
+
 }
