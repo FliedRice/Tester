@@ -15,13 +15,15 @@ public class Main {
 	int[][] conNodes;
 	int[] conAmount;
 	boolean[] isConnected;
+	int[] route;
 	Random randomGenerator = new Random();
 	int number;
 	int z;
 	int[] display;
 	int x, y;
 	int minutes;
-
+	int o = 100;
+	int number2;
 	void start() {
 		number = sc.nextInt();
 		if (number == 1) {
@@ -308,6 +310,117 @@ public class Main {
 		}
 		return true;
 	}
+	public boolean edgeCheckTree() {
+		int p = 0, q = 0;
+		for (int k = 0; k < conAmount[x]; k++) {
+			if (conNodes[x][k] != -1) {
+				q = conNodes[x][k];
+			}
+			if (q == y) {
+				return false;
+			}
+
+			for (int l = 0; l < conAmount[q]; l++) {
+				if (conNodes[q][l] != -1) {
+					p = conNodes[q][l];
+				}
+				if (p == y) {
+					return false;
+				}
+				for (int m = 0; m < conAmount[p]; m++) {
+					if (conNodes[p][m] == y) {
+						return false;
+					}
+				}
+			}
+		}
+		if(display[x] != 1 || display[y] != 1) {
+			return false;
+		}
+		return true;
+	}
+
+	public void customerSpawnDecline() {
+        number = randomGenerator.nextInt(100);
+        if(o<29) {
+            o = 29;
+        }
+        if ( number < o){
+            o--;
+            number = randomGenerator.nextInt(5);
+            while (number == 0) {
+                number = randomGenerator.nextInt(5);
+            }
+            System.out.print(number + " ");
+            for (int i = 0; i < number; i++) {
+                x = randomGenerator.nextInt(nodes);
+                y = randomGenerator.nextInt(nodes);
+                while (!edgeCheckTree() || x == y) {
+                    x = randomGenerator.nextInt(nodes);
+                    y = randomGenerator.nextInt(nodes);
+                }
+                ;
+                o--;
+                System.out.print(x + " " + y + " ");
+            }
+            System.out.println();
+        }
+        else {
+            System.out.println("0");
+        }
+    }
+
+	public void customerSpawnTree(){
+		number = randomGenerator.nextInt(5);
+		System.out.print(number + " ");
+		for (int i = 0; i < number; i++) {
+			x = randomGenerator.nextInt(nodes);
+			y = randomGenerator.nextInt(nodes);
+			while (!edgeCheckTree() || x == y) {
+				x = randomGenerator.nextInt(nodes);
+				y = randomGenerator.nextInt(nodes);
+			}
+			;
+			System.out.print(x + " " + y + " ");
+		}
+		System.out.println();
+	}
+	public void customerSpawnRoute() {
+        number = randomGenerator.nextInt(100);
+        if (number < 19) {
+            number = randomGenerator.nextInt(5);
+            while(number == 0){
+                number= randomGenerator.nextInt(5);
+            }
+            System.out.print(number + " ");
+            for (int i = 0; i < number; i++) {
+                int l = randomGenerator.nextInt(100);
+                if( l < 29 || number2 == 0 || number2 == 1) {
+                x = randomGenerator.nextInt(nodes);
+                y = randomGenerator.nextInt(nodes);
+                while (!edgeCheck() || x == y) {
+                    x = randomGenerator.nextInt(nodes);
+                    y = randomGenerator.nextInt(nodes);
+                }
+                }
+                else{
+                int z = randomGenerator.nextInt(number2 -1);
+                x = route[2* z];
+                y = route[(2*z)+1];
+                }
+
+                route[2 * number2] = x;
+                route[(2 * number2)+1] = y;
+                number2 ++;
+
+                System.out.print(x + " " + y + " ");
+            }
+            System.out.println();
+        }
+        else {
+            System.out.println("0");
+        }
+    }
 
 	public void run() {
 		info();
@@ -315,16 +428,26 @@ public class Main {
 		conAmount = new int[nodes];
 		display = new int[nodes];
 		isConnected = new boolean[nodes];
+		number2 = callList * 10;
+		route = new int [number2];
+		number2 = 0 ;
 		fill();
-		sickGraph();
+		//sickGraph();
 		//asickGraph();
-		// graph();
+		graph();
 		removeDup();
 		result();
 		for (int i = 0; i < callList; i++) {
-			customerSpawn();
-		}
-	}
+            //customerSpawn();
+            //customerSpawnTree();
+           if (training == i) { // if only when customerSpawnDecline();
+                o = 100;
+                number2 = 0;
+            }
+            customerSpawnRoute();
+            //customerSpawnDecline();
+        }
+    }
 
 	public static void main(String[] args) {
 		(new Main()).run();
