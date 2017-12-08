@@ -6,7 +6,7 @@ public class Main {
 	double parameter;
 	int capacity, callList, nodes, taxi, training, maxTime, lines, number, minutes, number2;
 	int[][] conNodes;
-	int[] conAmount, route, display;
+	int[] conAmount, route, display, dumbell;
 	boolean[] isConnected;
 	int x, y, z;
 	int o = 100;
@@ -215,13 +215,13 @@ public class Main {
 						}
 					}
 				}
-
+				number = randomGenerator.nextInt(10);
 				while (number < 5) {
 					number = randomGenerator.nextInt(nodes);
 					while (i == number) {
 						number = randomGenerator.nextInt(nodes);
 					}
-					if (conAmount[number] < 10 && isConnected[number] == false) {
+					if (conAmount[number] < 10 ) { //&& isConnected[number] == false
 						conNodes[i][n] = number;
 						n++;
 						z = conAmount[number];
@@ -419,6 +419,81 @@ public class Main {
 		}
 	}
 
+	public void dumbbellGraph(){
+		for (int q = 0; q<nodes; q++){
+			dumbell[q]= 1;
+			q++;
+			if(q<nodes) {
+			dumbell[q] = 2;
+			}
+		}
+		for (int i = 0; i < nodes; i++) {
+			int n = conAmount[i];
+			number = randomGenerator.nextInt(10);
+
+			while (n < 10) {
+				if (conAmount[i] == 0) {
+					while (conAmount[i] == 0) {
+						number = randomGenerator.nextInt(nodes);
+						while (i == number || (dumbell[i]!= dumbell[number])) {
+							number = randomGenerator.nextInt(nodes);
+						}
+						if ((i == 0 || i==1)|| (isConnected[number] == true && conAmount[number] < 10)) {
+							conNodes[i][n] = number;
+							isConnected[i] = true;
+							conAmount[i] = 1;
+							z = conAmount[number];
+							conNodes[number][z] = i;
+							conAmount[number] = z + 1;
+							isConnected[number] = true;
+						}
+					}
+					number = randomGenerator.nextInt(10);
+					n = n + 1;
+				}
+				if (conAmount[i] == 1) {
+					while (conAmount[i] == 1) {
+						number = randomGenerator.nextInt(nodes);
+						while ((i == number || number == conNodes[i][0])||(dumbell[i]!= dumbell[number])) {
+							number = randomGenerator.nextInt(nodes);
+						}
+						if (conAmount[number] < 10) {
+							conNodes[i][n] = number;
+							conAmount[i] = 2;
+							z = conAmount[number];
+							conNodes[number][z] = i;
+							conAmount[number] = z + 1;
+							isConnected[number] = true;
+						}
+					}
+				}
+
+				while (number < 5) {
+					number = randomGenerator.nextInt(nodes);
+					while (i == number || (dumbell[i] != dumbell[number])) {
+						number = randomGenerator.nextInt(nodes);
+					}
+					if (conAmount[number] < 10 && isConnected[number] == false) {
+						conNodes[i][n] = number;
+						n++;
+						z = conAmount[number];
+						conNodes[number][z] = i;
+						conAmount[number] = z + 1;
+						isConnected[number] = true;
+						conAmount[i] = conAmount[i] + 1;
+						number = randomGenerator.nextInt(10);
+						if (n == 10) {
+							number = 9;
+						}
+					}
+				}
+				n = 11;	// To exit the while loop
+			}
+
+		}
+
+	}
+
 	/*
 	 * Runs all methods that are required by the user, change this at will
 	 */
@@ -427,6 +502,7 @@ public class Main {
 		conNodes = new int[nodes][10];
 		conAmount = new int[nodes];
 		display = new int[nodes];
+		dumbell = new int[nodes];
 		isConnected = new boolean[nodes];
 		number2 = callList * 10;
 		route = new int[number2];
@@ -434,17 +510,18 @@ public class Main {
 		fill();
 		// sickGraph();
 		// asickGraph();
+		//dumbbellGraph();
 		randomGraph();
 		removeDup();
 		result();
 		for (int i = 0; i < callList; i++) {
-			// customerSpawn();
+			 customerSpawn();
 			// customerSpawnTree();
 			if (training == i) { // if only when customerSpawnDecline();
 				o = 100;
 				number2 = 0;
 			}
-			customerSpawnRoute();
+			//customerSpawnRoute();
 			// customerSpawnDecline();
 		}
 		System.out.println("finito");
