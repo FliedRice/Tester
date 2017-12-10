@@ -39,7 +39,7 @@ public class Main {
 		System.out.println(maxTime);
 		System.out.println(taxi + " " + capacity);
 		System.out.println(nodes);
-		
+
 		for (int i = 0; i < nodes; i++) {
 			System.out.print(display[i] + " "); // Print the amount of connected nodes
 			for (int n = 0; n < conAmount[i]; n++) {
@@ -49,7 +49,7 @@ public class Main {
 			}
 			System.out.println();
 		}
-		
+
 		System.out.println(training + " " + callList);
 	}
 
@@ -93,7 +93,7 @@ public class Main {
 					n = n + 1;
 				}
 
-				
+
 				while (number < 5) {
 					number = randomGenerator.nextInt(nodes);
 					while (i == number) {
@@ -118,7 +118,7 @@ public class Main {
 		}
 	}
 
-	/* 
+	/*
 	 * Creates an acyclic graph
 	 */
 	public void asickGraph() {
@@ -242,7 +242,7 @@ public class Main {
 
 	}
 
-	/* 
+	/*
 	 * conNodes contains duplicate node connections, which will be marked to ignore it during output
 	 */
 	public void removeDup() {
@@ -260,7 +260,7 @@ public class Main {
 		}
 	}
 
-	/* 
+	/*
 	 * Generate an output line with a random amount of customers along with their destination
 	 */
 	public void customerSpawn() {
@@ -509,9 +509,9 @@ public class Main {
 		number2 = 0;
 		fill();
 		// sickGraph();
-		// asickGraph();
+		 asickGraph();
 		//dumbbellGraph();
-		randomGraph();
+		//randomGraph();
 		removeDup();
 		result();
 		for (int i = 0; i < callList; i++) {
